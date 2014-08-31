@@ -1,6 +1,5 @@
 var fs = require('fs'),
     path = require('path'),
-    spawn = require('child_process').spawn,
     iswin = process.platform === 'win32',
     home = process.env[iswin ? 'USERPROFILE' : 'HOME'],
     dot = iswin ? '_' : '.',
@@ -14,8 +13,8 @@ dotfiles.forEach(function(dotfile){
             if(e)throw e;
             fs.symlink(curfile, destfile, function(e){if(e)throw e;});
         };
-    fs.lstat(destfile,function(err, stats){
-        if(err)link();
+    fs.lstat(destfile,function(e,stats){
+        if(e)link();
         else if(stats.isFile())
             fs.rename(destfile, bak, link);
         else if(stats.isSymbolicLink())
