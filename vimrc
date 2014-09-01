@@ -34,8 +34,8 @@ set spell
 scriptencoding utf-8
 set encoding=utf-8
 " tabs as spaces
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 " allow backspace
 set backspace=indent,eol,start
