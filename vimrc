@@ -15,6 +15,10 @@ Plugin 'vim-scripts/JavaScript-Indent'
 call vundle#end()
 filetype plugin indent on
 
+" ctrl v paste etc
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
 " scheme
 syntax enable
 set background=dark
