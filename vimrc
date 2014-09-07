@@ -45,6 +45,7 @@ set expandtab
 set backspace=indent,eol,start
 " wordwrap
 set nowrap
+set guioptions+=b
 " show ruler
 set ruler
 " highlight as you search
