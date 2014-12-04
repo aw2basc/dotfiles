@@ -12,6 +12,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'moll/vim-node'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/JavaScript-Indent'
+Plugin 'groenewege/vim-less'
+Plugin 'Shutnik/jshint2.vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -24,7 +26,7 @@ syntax enable
 set background=dark
 colorscheme solarized
 if has("win32")
-  set guifont=Source_Code_Pro:h11:cANSI
+  set guifont=Source_Code_Pro:h12:cANSI
 else
   set guifont=Source\ Code\ Pro\ Regular\ 12
 endif

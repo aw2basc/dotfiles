@@ -3,7 +3,7 @@ var fs = require('fs'),
     iswin = process.platform === 'win32',
     home = process.env[iswin ? 'USERPROFILE' : 'HOME'],
     dot = iswin ? '_' : '.',
-    dotfiles = ['vimrc'];
+    dotfiles = ['vimrc','jshintrc'];
 
 dotfiles.forEach(function(dotfile){
     var curfile = path.join(__dirname, dotfile),
