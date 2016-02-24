@@ -14,6 +14,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'groenewege/vim-less'
 Plugin 'Shutnik/jshint2.vim'
+Plugin 'leafgarland/typescript-vim'
 call vundle#end()
 filetype plugin indent on
 
