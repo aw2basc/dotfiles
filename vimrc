@@ -1,12 +1,10 @@
+" daily builds
+" https://bintray.com/micbou/generic/vim
 set nocompatible
-" Vundle
-" :PluginList
-" :PluginInstall
-" :PluginSearch plugin
-" :PluginClean
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'VuldleVim/Vundle.vim'
 Plugin 'gmarik/vundle'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'moll/vim-node'
@@ -15,8 +13,17 @@ Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'groenewege/vim-less'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 filetype plugin indent on
+" Vundle
+" :PluginList
+" :PluginInstall
+" :PluginUpdate
+" :PluginSearch plugin
+" :PluginClean
 
 " ctrl v paste etc
 source $VIMRUNTIME/mswin.vim
@@ -60,3 +67,14 @@ set ignorecase
 " markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_ignore_files = ['\m^/node_modules/', '\m\c\.d.ts$']
+let g:syntastic_typescript_checkers = ['tsc', 'tslint']
