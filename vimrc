@@ -16,6 +16,11 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-airline/vim-airline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'pangloss/vim-javascript'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 filetype plugin indent on
 " Vundle
@@ -38,6 +43,9 @@ if has("win32")
 else
   set guifont=Source\ Code\ Pro\ Regular\ 12
 endif
+
+" buffers
+set hidden
 " cursor highlight line
 set cursorline
 " line numbers
@@ -63,6 +71,8 @@ set incsearch
 " highligh search
 set hlsearch
 set ignorecase
+" statusline
+set laststatus=2
 
 " markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
@@ -76,5 +86,23 @@ let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_ignore_files = ['\m^/node_modules/', '\m\c\.d.ts$']
+let g:syntastic_ignore_files = ['\m^/node_modules/']
 let g:syntastic_typescript_checkers = ['tsc', 'tslint']
+" let g:syntastic_typescript_tsc_args = "-t ES5 -m system --experimentalDecorators --emitDecoratorMetadata --sourceMap true --moduleResolution node --removeComments false"
+" let g:syntastic_typescript_tsc_args = "-p ~/DEV/CDX-10/client/tsconfig.json"
+
+" Move tabs with alt + left|right
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
+
+" nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
+" powerline
+" https://powerline.readthedocs.io/en/master/installation.html#patched-fonts
+let g:airline_powerline_fonts = 1
