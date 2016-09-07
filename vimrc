@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'VuldleVim/Vundle.vim'
 Plugin 'gmarik/vundle'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'ryanoasis/vim-devicons'
 Plugin 'moll/vim-node'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/JavaScript-Indent'
@@ -21,6 +22,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 call vundle#end()
 filetype plugin indent on
 " Vundle
@@ -35,13 +37,15 @@ source $VIMRUNTIME/mswin.vim
 behave mswin
 
 " scheme
+" https://github.com/ryanoasis/nerd-fonts.git
 syntax enable
 set background=dark
 colorscheme solarized
 if has("win32")
   set guifont=Source_Code_Pro:h12:cANSI
 else
-  set guifont=Source\ Code\ Pro\ Regular\ 12
+  set guifont=SauceCodePro\ Nerd\ Font\ 12
+  " set guifont=Source\ Code\ Pro\ Regular\ 12
 endif
 
 " buffers
@@ -99,10 +103,17 @@ nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " nerdtree
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle %<CR>
+let NERDTreeQuitOnOpen=1
 
 " powerline
 " https://powerline.readthedocs.io/en/master/installation.html#patched-fonts
 let g:airline_powerline_fonts = 1
+
+" nerd tree highlight
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
