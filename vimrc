@@ -23,6 +23,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 filetype plugin indent on
 " Vundle
@@ -77,6 +78,8 @@ set hlsearch
 set ignorecase
 " statusline
 set laststatus=2
+" updatetime
+set updatetime=250
 
 " markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
