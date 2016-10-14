@@ -43,7 +43,7 @@ syntax enable
 set background=dark
 colorscheme solarized
 if has("win32")
-  set guifont=Source_Code_Pro:h12:cANSI
+  set guifont=Sauce_Code_Powerline:h12:cANSI
 else
   set guifont=SauceCodePro\ Nerd\ Font\ 12
   " set guifont=Source\ Code\ Pro\ Regular\ 12
