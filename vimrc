@@ -15,6 +15,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Shougo/vimproc.vim'
+Plugin 'Quramy/tsuquyomi'
 Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
@@ -24,6 +25,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'xolox/vim-misc'
 call vundle#end()
 filetype plugin indent on
 " Vundle
@@ -80,6 +82,8 @@ set ignorecase
 set laststatus=2
 " updatetime
 set updatetime=250
+" completion menu
+set completeopt-=preview
 
 " markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
@@ -126,3 +130,18 @@ let g:airline_powerline_fonts = 1
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
+
+" tsuquyomi
+let g:tsuquyomi_use_local_typescript = 0
+let g:tsuquyomi_javascript_support = 1
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']
+autocmd FileType typescript setlocal completeopt+=preview
+set ballooneval
+autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
+
+" youcompleteme
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
