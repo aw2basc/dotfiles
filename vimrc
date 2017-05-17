@@ -121,6 +121,7 @@ let g:airline#extensions#tabline#exclude_preview = 1
 " nerdtree
 map <C-n> :NERDTreeToggle %<CR>
 let NERDTreeQuitOnOpen=1
+let NERDTreeShowHidden=1
 
 " powerline
 " https://powerline.readthedocs.io/en/master/installation.html#patched-fonts
