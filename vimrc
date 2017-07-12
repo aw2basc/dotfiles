@@ -84,6 +84,8 @@ set laststatus=2
 set updatetime=250
 " completion menu
 set completeopt-=preview
+" remove toolbar
+set guioptions-=T
 
 " markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
