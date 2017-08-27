@@ -86,6 +86,8 @@ set updatetime=250
 set completeopt-=preview
 " remove toolbar
 set guioptions-=T
+" do not add eol if not there
+set nofixendofline
 
 " markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
