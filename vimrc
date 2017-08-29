@@ -27,6 +27,7 @@ Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'xolox/vim-misc'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'kchmck/vim-coffee-script'
 call vundle#end()
 filetype plugin indent on
 " Vundle
@@ -127,6 +128,7 @@ let g:airline#extensions#tabline#exclude_preview = 1
 map <C-n> :NERDTreeToggle %<CR>
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.swp$']
 
 " powerline
 " https://powerline.readthedocs.io/en/master/installation.html#patched-fonts
