@@ -93,6 +93,10 @@ set completeopt-=preview
 set guioptions-=T
 " do not add eol if not there
 set nofixendofline
+" folding
+set foldlevelstart=20
+autocmd Syntax json,xml,html,xhtml setlocal foldmethod=syntax
+autocmd Syntax json,xml,html,xhtml normal zR
 
 " markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
