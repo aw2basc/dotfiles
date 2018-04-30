@@ -2,11 +2,18 @@ dotfiles
 ========
 
 ###links   
-[Source Code Pro](http://sourceforge.net/projects/sourcecodepro.adobe/files/)   
 [Vundle](https://github.com/gmarik/Vundle.vim.git)   
 `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`   
+
 [YouCompleteMe](https://valloric.github.io/YouCompleteMe)  
 `npm install -g tern typescript`  
+`sudo apt-get install build-essential cmake python-dev python3-dev`  
+`~/.vim/bundle/YouCompleteMe/install.py --js-completer --cs-completer`  
+`cd ~/.vim/bundle/vimproc.vim && make`  
+
+[Source Code Pro](https://github.com/adobe-fonts/source-code-pro/releases)   
+[nerd fonts](https://github.com/ryanoasis/nerd-fonts#font-installation)  
+
 ##windows
 [cmake](https://cmake.org/download/)  
 [mingw](https://sourceforge.net/projects/mingw/files/) mingw32-gcc mingw32-make
