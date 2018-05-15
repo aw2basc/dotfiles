@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VuldleVim/Vundle.vim'
 Plugin 'gmarik/vundle'
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'moll/vim-node'
 Plugin 'jelera/vim-javascript-syntax'
@@ -25,12 +25,13 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'xolox/vim-misc'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'kchmck/vim-coffee-script'
+" Plugin 'kchmck/vim-coffee-script'
 Plugin 'sotte/presenting.vim'
+Plugin 'google/vim-colorscheme-primary'
 call vundle#end()
 filetype plugin indent on
 " Vundle
@@ -47,8 +48,9 @@ behave mswin
 " scheme
 " https://github.com/ryanoasis/nerd-fonts.git
 syntax enable
-set background=dark
-colorscheme solarized
+set t_Co=256
+set background=light
+colorscheme primary
 if has("win32")
   set guifont=Sauce_Code_Powerline:h12:cANSI
 else
@@ -123,13 +125,16 @@ nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
 let g:airline#extensions#tabline#exclude_preview = 1
+let g:airline_theme = 'papercolor'
+if has("gui_running")
+  let g:airline_powerline_fonts = 1
+endif
 
 " nerdtree
 map <C-n> :NERDTreeToggle %<CR>
@@ -137,14 +142,10 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.swp$']
 
-" powerline
-" https://powerline.readthedocs.io/en/master/installation.html#patched-fonts
-let g:airline_powerline_fonts = 1
-
 " nerd tree highlight
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
+" let g:NERDTreeFileExtensionHighlightFullName = 1
+" let g:NERDTreeExactMatchHighlightFullName = 1
+" let g:NERDTreePatternMatchHighlightFullName = 1
 
 " tsuquyomi
 let g:tsuquyomi_use_local_typescript = 0
