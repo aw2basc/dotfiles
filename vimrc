@@ -97,8 +97,9 @@ set guioptions-=T
 set nofixendofline
 " folding
 set foldlevelstart=20
-autocmd Syntax json,xml,html,xhtml setlocal foldmethod=syntax
-autocmd Syntax json,xml,html,xhtml normal zR
+set foldmethod=manual
+" autocmd Syntax json,xml,html,xhtml setlocal foldmethod=syntax
+" autocmd Syntax json,xml,html,xhtml normal zR
 
 " markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
