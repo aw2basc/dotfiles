@@ -31,7 +31,8 @@ Plugin 'xolox/vim-misc'
 Plugin 'editorconfig/editorconfig-vim'
 " Plugin 'kchmck/vim-coffee-script'
 Plugin 'sotte/presenting.vim'
-Plugin 'google/vim-colorscheme-primary'
+Plugin 'morhetz/gruvbox'
+" Plugin 'google/vim-colorscheme-primary'
 call vundle#end()
 filetype plugin indent on
 " Vundle
@@ -49,8 +50,8 @@ behave mswin
 " https://github.com/ryanoasis/nerd-fonts.git
 syntax enable
 set t_Co=256
-set background=light
-colorscheme primary
+set background=dark
+colorscheme gruvbox
 if has("win32")
   set guifont=Sauce_Code_Powerline:h12:cANSI
 else
@@ -132,7 +133,7 @@ let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
 let g:airline#extensions#tabline#exclude_preview = 1
-let g:airline_theme = 'papercolor'
+let g:airline_theme = 'gruvbox'
 if has("gui_running")
   let g:airline_powerline_fonts = 1
 endif
