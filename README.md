@@ -11,8 +11,9 @@ dotfiles
 `~/.vim/bundle/YouCompleteMe/install.py --js-completer --cs-completer`  
 `cd ~/.vim/bundle/vimproc.vim && make`  
 
-[Source Code Pro](https://github.com/adobe-fonts/source-code-pro/releases)   
 [nerd fonts](https://github.com/ryanoasis/nerd-fonts#font-installation)  
+[oh my zsh](https://github.com/ohmyzsh/ohmyzsh)
+[pl9k](https://github.com/Powerlevel9k/powerlevel9k)
 
 ##windows
 [cmake](https://cmake.org/download/)  
