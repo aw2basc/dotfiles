@@ -57,7 +57,7 @@ colorscheme gruvbox
 if has("win32")
   set guifont=Sauce_Code_Powerline:h12:cANSI
 else
-  set guifont=SauceCodePro\ Nerd\ Font\ 12
+  set guifont=FiraCode\ Nerd\ Font\ 12
   " set guifont=Source\ Code\ Pro\ Regular\ 12
 endif
 
