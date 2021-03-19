@@ -4,7 +4,14 @@ var fs = require('fs'),
     iswin = process.platform === 'win32',
     home = process.env[iswin ? 'USERPROFILE' : 'HOME'],
     dot = iswin ? '_' : '.',
-    dotfiles = ['vimrc','jshintrc','zshrc','gitignore_global'];
+    dotfiles = [
+      'vimrc',
+      'jshintrc',
+      'zshrc',
+      'gitignore_global',
+      'config/nvim/init.vim',
+      'config/nvim/coc-settings.json'
+    ];
 
 console.log("dotfiles:");
 dotfiles.forEach(function(dotfile){

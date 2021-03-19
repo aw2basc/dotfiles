@@ -9,6 +9,12 @@ sudo apt-get install -y unace unrar zip unzip p7zip-full p7zip-rar sharutils rar
 # zsh
 sudo apt install -y zsh
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+# neovim
+sudo apt install -y neovim
+mkdir ~/.config/nvim -p
+# vim-plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 # vim
 sudo add-apt-repository -y ppa:jonathonf/vim
 sudo apt update
@@ -18,6 +24,6 @@ vim +PluginInstall +qall
 # dotfiles
 node dotfiles.js
 # youcompleteme
-sudo npm install -g tern typescript
-~/.vim/bundle/YouCompleteMe/install.py --js-completer
-cd ~/.vim/bundle/vimproc.vim && make
+# sudo npm install -g tern typescript
+# ~/.vim/bundle/YouCompleteMe/install.py --js-completer
+# cd ~/.vim/bundle/vimproc.vim && make

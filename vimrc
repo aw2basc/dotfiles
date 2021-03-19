@@ -1,3 +1,4 @@
+" vundle
 " daily builds
 " https://bintray.com/micbou/generic/vim
 set nocompatible
@@ -6,9 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VuldleVim/Vundle.vim'
 Plugin 'gmarik/vundle'
-" Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
@@ -23,18 +22,15 @@ Plugin 'tpope/vim-rhubarb'
 Plugin 'airblade/vim-gitgutter'
 " themes
 Plugin 'morhetz/gruvbox'
-" Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plugin 'moll/vim-node'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'vim-scripts/JavaScript-Indent'
+" syntax
 Plugin 'pangloss/vim-javascript'
+Plugin 'moll/vim-node'
 Plugin 'groenewege/vim-less'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'aklt/plantuml-syntax'
+Plugin 'MaxMEllon/vim-jsx-pretty'
 " typescript
-" Plugin 'leafgarland/typescript-vim'
-" Plugin 'Quramy/tsuquyomi'
-" Plugin 'google/vim-colorscheme-primary'
+Plugin 'leafgarland/typescript-vim'
 call vundle#end()
 filetype plugin indent on
 " Vundle
@@ -57,7 +53,7 @@ colorscheme gruvbox
 if has("win32")
   set guifont=Sauce_Code_Powerline:h12:cANSI
 else
-  set guifont=FiraCode\ Nerd\ Font\ 12
+  set guifont=FiraCode\ Nerd\ Font\ 20
   " set guifont=Source\ Code\ Pro\ Regular\ 12
 endif
 

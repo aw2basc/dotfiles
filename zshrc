@@ -103,3 +103,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+export PATH="$HOME/bin:$PATH"
