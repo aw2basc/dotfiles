@@ -15,6 +15,10 @@ dotfiles
 [oh my zsh](https://github.com/ohmyzsh/ohmyzsh)
 [pl9k](https://github.com/Powerlevel9k/powerlevel9k)
 
+##wsl
+add [win32yank] to C:\Windows\System32
+`sudo apt remove xclip`
+
 ##windows
 [cmake](https://cmake.org/download/)  
 [mingw](https://sourceforge.net/projects/mingw/files/) mingw32-gcc mingw32-make
