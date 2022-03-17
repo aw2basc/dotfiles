@@ -3,8 +3,14 @@
 " https://bintray.com/micbou/generic/vim
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if has("win32")
+  set shellslash
+  set rtp+=~/vimfiles/bundle/Vundle.vim
+  call vundle#begin('~/vimfiles/bundle')
+else
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
+endif
 Plugin 'VuldleVim/Vundle.vim'
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/syntastic'
@@ -51,10 +57,9 @@ set t_Co=256
 set background=dark
 colorscheme gruvbox
 if has("win32")
-  set guifont=Sauce_Code_Powerline:h12:cANSI
+  set guifont=FiraMono_NF:h12:cANSI
 else
   set guifont=FiraCode\ Nerd\ Font\ 20
-  " set guifont=Source\ Code\ Pro\ Regular\ 12
 endif
 
 " buffers
