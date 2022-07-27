@@ -33,6 +33,8 @@ Plug 'neoclide/coc-lists'
 " debug
 Plug 'puremourning/vimspector'
 " Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+" go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 " PlugInstall [name ...] [#threads] Install plugins
 " PlugUpdate [name ...] [#threads]  Install or update plugins
