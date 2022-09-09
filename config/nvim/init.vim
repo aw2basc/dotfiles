@@ -111,7 +111,7 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 " clipboard
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 
 " let g:clipboard = {
 "             \   'name': 'WslClipboard',
