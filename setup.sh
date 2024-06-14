@@ -5,9 +5,9 @@ sudo apt install -y build-essential libssl-dev git curl xclip
 # dev
 sudo apt install -y cmake python-dev python3-dev python-pip libkrb5-dev nodejs npm default-jre default-jdk
 # archive
-sudo apt-get install -y unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller
+sudo apt install -y unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller
 # zsh
-sudo apt install -y zsh
+#sudo apt install -y zsh
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 # neovim
 sudo apt install -y neovim
